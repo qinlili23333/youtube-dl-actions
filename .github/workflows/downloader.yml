@@ -9,7 +9,7 @@ jobs:
       run: |
        mkdir D:\VideoDL
        cd /d D:\VideoDL
-       curl https://github.com/ytdl-org/youtube-dl/releases/download/2021.01.24.1/youtube-dl.exe -o D:\youtube-dl.exe
+       curl https://github.com/ytdl-org/youtube-dl/releases/download/2021.01.24.1/youtube-dl.exe -o D:\youtube-dl.exe -L
     - name: Video Download
       shell: cmd
       run: |
