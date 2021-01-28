@@ -12,7 +12,7 @@ jobs:
     - name: Video Download
       run: |
         cd D:\VideoDL
-        D:\VideoDL\youtube-dl.exe  https://www.youtube.com/watch?v=wGM8AN07BYo
+        .\youtube-dl.exe  https://www.youtube.com/watch?v=wGM8AN07BYo
         del  .\youtube-dl.exe
     - name : Upload artifact
       uses: actions/upload-artifact@master
