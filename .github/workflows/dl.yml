@@ -1,6 +1,5 @@
 name: VideoDownloader
-on:
-  gollum
+on: push
 jobs:
   AutoDownloaderProcess:
     runs-on: windows-latest
