@@ -5,15 +5,17 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: youtube-dl Install
+      shell: cmd
       run: |
        mkdir D:\VideoDL
-       cd D:\VideoDL
+       cd /d D:\VideoDL
        curl https://github.com/ytdl-org/youtube-dl/releases/download/2021.01.24.1/youtube-dl.exe -o D:\youtube-dl.exe
     - name: Video Download
+      shell: cmd
       run: |
-        cd D:\VideoDL
-        .\youtube-dl.exe  https://www.youtube.com/watch?v=wGM8AN07BYo
-        del  .\youtube-dl.exe
+        cd /d D:\VideoDL
+        youtube-dl.exe  https://www.youtube.com/watch?v=wGM8AN07BYo
+        del  /F /S /Q youtube-dl.exe
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
